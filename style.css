@@ -72,7 +72,7 @@ header.scrolled{box-shadow:0 2px 8px rgba(0,0,0,.5);}
 .card:hover{transform:translateY(-6px);box-shadow:0 8px 18px rgba(0,0,0,.4);}
 
 /* ==== SWIPER GENERAL ==== */
-.swiper{width:50%;padding:2rem 0;}
+.swiper{width:70%;padding:2rem 0;}
 .swiper-slide img{width:100%;border-radius:12px;}
 .swiper-pagination-bullet{background:var(--gold);}
 
