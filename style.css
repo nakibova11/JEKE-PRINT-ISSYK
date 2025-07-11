@@ -125,52 +125,45 @@ footer{background:var(--gray-dark);padding:3rem 0 1rem;}
   .btn{width:100%;max-width:320px;margin:.3rem auto;}
 }
 
-
-/* === MOBILE HEADER (≤ 600 px)  ================================ */
+/* === FINAL MOBILE HEADER (≤ 600px) =============================== */
 @media (max-width:600px){
-
-  /* 1) Первая строка:  логотип слева  |  языки справа */
-  .nav-inner{
-    display:flex;           /* остаёмся в строке */
-    flex-wrap:wrap;         /* разрешаем перенос на 2-ю строку */
-    align-items:center;
-    padding-bottom:.2rem;   /* чуток воздуха */
+  .nav-inner {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center;
+    gap: .3rem;
   }
-
-  .logo{
-    font-size:1.15rem !important;
-    white-space:nowrap;
+  .logo {
+    font-size: 1.15rem !important;
+    white-space: nowrap !important;
   }
-
-  #lang-switcher{
-    margin-left:auto;       /* прижали вправо той же строки */
-    font-size:.8rem;
+  #lang-switcher {
+    margin-left: auto !important;
+    font-size: .8rem !important;
   }
-
-  /* 2) Вторая строка = горизонтальное меню */
-  #nav-links{
-    order:2;                /* гарантируем перенос на «следующую строку» */
-    flex-basis:100%;        /* ширина всей строки */
-    display:flex !important;
-    flex-direction:row !important;
-    gap:.9rem;
-    overflow-x:auto;        /* свайп, если не влезает */
-    background:none !important;
-    padding:.25rem 0 .4rem;
-    scrollbar-width:none;
+  #burger {
+    display: none !important;
   }
-  #nav-links::-webkit-scrollbar{display:none;}
-
-  #nav-links a{
-    font-size:.9rem !important;
-    white-space:nowrap;
-    padding:0;
+  #nav-links {
+    order: 2 !important;
+    flex-basis: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: .8rem !important;
+    overflow-x: auto !important;
+    background: none !important;
+    padding: .25rem 0 .4rem !important;
   }
-
-  /* 3) Бургер скрываем, чтобы не мешал */
-  #burger{display:none !important;}
-
-  /* 4) Чтоб hero не прятался под шапкой */
-  #hero{padding-top:88px !important;}
+  #nav-links::-webkit-scrollbar {
+    display: none !important;
+  }
+  #nav-links a {
+    font-size: .9rem !important;
+    white-space: nowrap !important;
+    padding: 0 !important;
+  }
+  #hero {
+    padding-top: 88px !important;
+  }
 }
-
