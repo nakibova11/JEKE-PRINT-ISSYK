@@ -124,7 +124,7 @@ footer{background:var(--gray-dark);padding:3rem 0 1rem;}
   .hero-content h1{font-size:2rem;}
   .btn{width:100%;max-width:320px;margin:.3rem auto;}
 }
-/* === MOBILE HEADER COMPACT (≤ 600 px) ========================= */
+/* === старый MOBILE HEADER COMPACT (≤ 600 px) ========================= 
 @media (max-width:600px){
   /* логотип короче, не переносится */
   .logo{
@@ -181,4 +181,53 @@ footer{background:var(--gray-dark);padding:3rem 0 1rem;}
 
   /* чтобы hero не лез под шапку */
   #hero{padding-top:90px !important;}
+} */
+
+/* === MOBILE HEADER (≤ 600 px)  ================================ */
+@media (max-width:600px){
+
+  /* 1) Первая строка:  логотип слева  |  языки справа */
+  .nav-inner{
+    display:flex;           /* остаёмся в строке */
+    flex-wrap:wrap;         /* разрешаем перенос на 2-ю строку */
+    align-items:center;
+    padding-bottom:.2rem;   /* чуток воздуха */
+  }
+
+  .logo{
+    font-size:1.15rem !important;
+    white-space:nowrap;
+  }
+
+  #lang-switcher{
+    margin-left:auto;       /* прижали вправо той же строки */
+    font-size:.8rem;
+  }
+
+  /* 2) Вторая строка = горизонтальное меню */
+  #nav-links{
+    order:2;                /* гарантируем перенос на «следующую строку» */
+    flex-basis:100%;        /* ширина всей строки */
+    display:flex !important;
+    flex-direction:row !important;
+    gap:.9rem;
+    overflow-x:auto;        /* свайп, если не влезает */
+    background:none !important;
+    padding:.25rem 0 .4rem;
+    scrollbar-width:none;
+  }
+  #nav-links::-webkit-scrollbar{display:none;}
+
+  #nav-links a{
+    font-size:.9rem !important;
+    white-space:nowrap;
+    padding:0;
+  }
+
+  /* 3) Бургер скрываем, чтобы не мешал */
+  #burger{display:none !important;}
+
+  /* 4) Чтоб hero не прятался под шапкой */
+  #hero{padding-top:88px !important;}
 }
+
