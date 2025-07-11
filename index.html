@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JEKE PRINT ISSYK — DTF / Sublimation</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- AOS (scroll-animation) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Swiper (карусели) -->
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+  <!-- Иконки -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== Preloader ===== -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- ===== NAV ===== -->
+  <header id="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo"><span>JEKE</span> PRINT ISSYK</a>
+      <nav>
+        <ul id="nav-links">
+          <li><a href="#about" data-i18n="nav.about">О нас</a></li>
+          <li><a href="#services" data-i18n="nav.services">Каталог</a></li>
+          <li><a href="#portfolio" data-i18n="nav.portfolio">Работы</a></li>
+          <li><a href="#process" data-i18n="nav.process">Процесс</a></li>
+          <li><a href="#contacts" data-i18n="nav.contacts">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div id="lang-switcher">
+        <button data-lang="kz">KZ</button>|
+        <button data-lang="ru" class="active">RU</button>|
+        <button data-lang="en">EN</button>
+      </div>
+
+      <div id="burger"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <!-- Видео для десктопа -->
+    <video id="hero-video" autoplay muted loop playsinline poster="2.jpg">
+      <source src="1.mp4" type="video/mp4" />
+    </video>
+    <!-- Фон-градиент -->
+    <div class="overlay"></div>
+
+    <div class="hero-content" data-aos="fade-up">
+      <h1 data-i18n="hero.title">JEKE PRINT ISSYK — воплотим ваши идеи в принтах!</h1>
+      <p data-i18n="hero.subtitle">Печать на футболках, кружках и не только</p>
+      <div class="hero-btns">
+        <a href="#services" class="btn primary" data-i18n="hero.cta1">Наши услуги</a>
+        <a href="#contacts" class="btn outline" data-i18n="hero.cta2">Связаться</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="container flex">
+      <div class="about-text" data-aos="fade-right">
+        <h2 data-i18n="about.title">О нас</h2>
+        <p data-i18n="about.p1">
+          Мы — мастерская креативной печати JEKE PRINT ISSYK. Любим превращать идеи в вещи: от одной эксклюзивной футболки до партий корпоративных худи, от памятной кружки до бренд-пакетов
+	Наш подход – гибкость и креатив. Мы не навязываем клиенту шаблонов – напротив, мы верим, что каждая вещь может рассказать свою историю. Поэтому для нас нет ‘слишком смелых’ или ‘слишком простых’ идей – мы с равным энтузиазмом реализуем минималистичный чёрно-белый узор и кислотный принт, сияющий всеми цветами. Наша задача – перенести вашу задумку на ткань или кружку максимально качественно, сохранив авторский стиль и настроение.
+        </p>
+        <ul class="features">
+          <li data-i18n="about.f1"><i class="fa-solid fa-star"></i> Печать фотографического качества</li>
+          <li data-i18n="about.f2"><i class="fa-solid fa-pen-ruler"></i> Индивидуальный дизайн</li>
+          <li data-i18n="about.f3"><i class="fa-solid fa-layer-group"></i> Любые тиражи</li>
+          <li data-i18n="about.f4"><i class="fa-solid fa-heart"></i> Душевный сервис</li>
+        </ul>
+      </div>
+      <div class="about-media" data-aos="zoom-in">
+        <img src="2.jpg" alt="Workshop photo" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services" class="section light">
+    <div class="container">
+      <h2 class="center" data-aos="fade-up" data-i18n="services.title">Наши услуги</h2>
+
+      <div class="card-grid">
+        <!-- Карточка 1 -->
+        <div class="card" data-aos="zoom-in">
+          <i class="fa-solid fa-shirt"></i>
+          <h3 data-i18n="services.c1">Одежда</h3>
+        </div>
+        <!-- Карточка 2 -->
+        <div class="card" data-aos="zoom-in" data-aos-delay="100">
+          <i class="fa-solid fa-mug-hot"></i>
+          <h3 data-i18n="services.c2">Кружки</h3>
+        </div>
+        <!-- Карточка 3 -->
+        <div class="card" data-aos="zoom-in" data-aos-delay="200">
+          <i class="fa-solid fa-hat-cowboy"></i>
+          <h3 data-i18n="services.c3">Кепки</h3>
+        </div>
+        <!-- Карточка 4 -->
+        <div class="card" data-aos="zoom-in" data-aos-delay="300">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <h3 data-i18n="services.c4">Пакеты / шопперы</h3>
+        </div>
+        <!-- Карточка 5 -->
+        <div class="card" data-aos="zoom-in" data-aos-delay="400">
+          <i class="fa-solid fa-briefcase"></i>
+          <h3 data-i18n="services.c5">Корпоративный мерч</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PORTFOLIO (Swiper) ===== -->
+  <section id="portfolio" class="section">
+    <h2 class="center" data-aos="fade-up" data-i18n="portfolio.title">Примеры работ</h2>
+    <div class="swiper portfolio-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="01.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="02.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="03.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="04.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="05.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="06.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="07.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="08.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="09.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="10.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="11.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="12.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="13.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="14.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="15.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="16.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="17.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="18.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="19.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="20.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="21.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="22.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="23.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="24.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="25.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="26.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="27.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="28.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="29.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="30.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="31.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="32.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="33.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="34.jpg" alt="..."></div>
+        <div class="swiper-slide"><img src="35.jpg" alt="..."></div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+
+ 
+
+  <!-- ===== PROCESS ===== -->
+  <section id="process" class="section">
+    <div class="container" data-aos="fade-up">
+      <h2 data-i18n="process.title">Как мы работаем</h2>
+      <ol class="process-list">
+        <li data-i18n="process.p1">Связываетесь удобным способом</li>
+        <li data-i18n="process.p2">Обсуждаем идею и дизайн</li>
+        <li data-i18n="process.p3">Утверждаем макет и цену</li>
+        <li data-i18n="process.p4">Печать и выдача заказа</li>
+      </ol>
+      <p class="note" data-i18n="process.note">
+        Оплата и детали уточняются индивидуально — никаких корзин: только диалог 🤝 Ваш заказ будет выполнен в течение 24 часов. Вы можете оформить заказ в любое время (24/7), при этом физический бутик открыт ежедневно с 10:00 до 17:00. Осуществляем доставку по всему Казахстану 
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTS / FOOTER ===== -->
+  <footer id="contacts">
+    <div class="container flex">
+      <div class="contact-info" data-aos="fade-right">
+        <h2 data-i18n="contacts.title">Контакты</h2>
+        <p><i class="fa-solid fa-location-dot"></i> <span data-i18n="contacts.address">Алматинская обл., г. Есик, ТД «Kari», 2 этаж, бутик №26</span></p>
+        <p><i class="fa-solid fa-phone"></i> <a href="tel:+77478211198">+7 747 821-11-98</a></p>
+        <p><i class="fa-solid fa-clock"></i> <span data-i18n="contacts.hours">Ежедневно 10:00–17:00</span></p>
+      </div>
+
+      <div class="social-links" data-aos="fade-left">
+        <a href="https://wa.me/77478211198" class="wa" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/jeke.print.issyk?igsh=ZHE0am96dnEydjJu" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://tiktok.com/@jeke.print.issyk" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+    <p class="copy">© 2025 JEKE PRINT ISSYK</p>
+  </footer>
+
+  <!-- ===== Back to Top ===== -->
+  <button id="to-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

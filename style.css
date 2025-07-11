@@ -1,0 +1,126 @@
+/* ✨ Палитра */
+:root{
+  --purple-dark:#3a0c6e;
+  --purple:#6b1fa3;
+  --purple-light:#c6a8e8;
+  --lavender:#efe8ff;
+  --white:#fff;
+  --gray-dark:#222;
+  --gold:#ffcc00;
+}
+/* ==== СБРОС ==== */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"Roboto",sans-serif;color:var(--white);background:var(--purple-dark);}
+img,video{max-width:100%;display:block;}
+h1,h2,h3{font-family:"Poppins",sans-serif;font-weight:700;line-height:1.2;}
+h2{margin-bottom:1rem;font-size:2.2rem;text-align:center;}
+a{text-decoration:none;color:inherit;}
+ul{list-style:none;}
+
+.container{width:90%;max-width:1200px;margin-inline:auto;}
+.section{padding:4rem 0;}
+.section.light{background:var(--lavender);color:var(--gray-dark);}
+.center{text-align:center;}
+.flex{display:flex;flex-wrap:wrap;gap:2rem;align-items:center;}
+
+/* ==== Preloader ==== */
+#preloader{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:var(--purple-dark);z-index:10000;}
+.spinner{width:50px;height:50px;border:6px solid var(--purple-light);border-top-color:var(--gold);border-radius:50%;animation:spin 1s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+
+/* ==== NAV ==== */
+header{position:fixed;top:0;width:100%;background:rgba(34,0,51,.7);backdrop-filter:blur(6px);z-index:1000;transition:box-shadow .3s;}
+header.scrolled{box-shadow:0 2px 8px rgba(0,0,0,.5);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px;}
+.logo{font-size:1.4rem;font-weight:700;}
+.logo span{color:var(--gold);}
+#nav-links{display:flex;gap:1.5rem;}
+#nav-links a{position:relative;padding:.2rem 0;}
+#nav-links a.active::after,
+#nav-links a:hover::after{content:"";position:absolute;left:0;bottom:-3px;width:100%;height:2px;background:var(--gold);}
+#lang-switcher{display:flex;gap:.3rem;font-size:.85rem;}
+#lang-switcher button{background:none;border:none;color:var(--white);cursor:pointer;}
+#lang-switcher .active{color:var(--gold);}
+#burger{display:none;flex-direction:column;gap:4px;cursor:pointer;}
+#burger span{width:22px;height:2px;background:var(--white);}
+
+/* ==== HERO ==== */
+#hero{position:relative;height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;}
+#hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(58,12,110,.9) 0%,rgba(58,12,110,.3) 60%,rgba(0,0,0,.5) 100%);}
+.hero-content{position:relative;z-index:2;width:90%;max-width:800px;}
+.hero-content h1{font-size:3rem;margin-bottom:1rem;}
+.hero-content p{margin-bottom:2rem;font-size:1.2rem;}
+.btn{display:inline-block;padding:.9rem 2rem;border-radius:40px;font-weight:600;transition:.3s;}
+.btn.primary{background:var(--purple);color:var(--white);}
+.btn.primary:hover{background:var(--gold);color:var(--gray-dark);}
+.btn.outline{border:2px solid var(--white);}
+.btn.outline:hover{background:var(--white);color:var(--purple-dark);}
+
+/* ==== ABOUT ==== */
+.about-text{flex:1;min-width:280px;}
+.about-media{flex:1;min-width:280px;}
+.about-media img{border-radius:12px;}
+.features li{margin:.5rem 0;display:flex;align-items:center;gap:.6rem;}
+.features i{color:var(--gold);}
+
+/* ==== SERVICES ==== */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;margin-top:3rem;}
+.card{background:var(--purple);padding:2rem;border-radius:12px;text-align:center;color:var(--white);cursor:pointer;transition:.3s;}
+.card i{font-size:2rem;margin-bottom:.8rem;color:var(--gold);}
+.card:hover{transform:translateY(-6px);box-shadow:0 8px 18px rgba(0,0,0,.4);}
+
+/* ==== SWIPER GENERAL ==== */
+.swiper{width:25%;padding:2rem 0;}
+.swiper-slide img{width:100%;border-radius:12px;}
+.swiper-pagination-bullet{background:var(--gold);}
+
+/* Секция c портфолио */
+#portfolio {           /* снизу было 4rem → делаем 0 или 1rem */
+  padding-bottom: 1 !important;
+}
+/* сам свайпер */
+#portfolio .swiper {   /* сверху/снизу было 2rem → оставим только верх */
+  padding: 2rem 0 0 !important;
+}
+
+/* (опционально) верхний отступ у следующей секции */
+#testimonials {        /* сверху было 4rem → уменьшаем */
+  padding-top: 2rem !important;
+}
+
+/* Testimonials */
+.testimonial{background:var(--purple-light);color:var(--gray-dark);padding:2rem;border-radius:12px;text-align:center;}
+.testimonial p{font-size:1.1rem;margin-bottom:1rem;}
+.testimonial span{font-weight:700;}
+
+/* ==== PROCESS ==== */
+.process-list{margin:2rem 0 1rem 1rem;}
+.process-list li{margin:.7rem 0;padding-left:.5rem;border-left:4px solid var(--gold);}
+.note{font-style:italic;}
+
+/* ==== CONTACTS ==== */
+footer{background:var(--gray-dark);padding:3rem 0 1rem;}
+.contact-info h2{margin-bottom:1rem;}
+.contact-info p{margin:.6rem 0;display:flex;align-items:center;gap:.5rem;}
+.contact-info a{color:var(--gold);}
+.social-links{display:flex;gap:1rem;font-size:1.8rem;}
+.social-links a{transition:.3s;}
+.social-links a.wa{color:#25D366;}
+.social-links a:hover{transform:scale(1.1);}
+.copy{text-align:center;margin-top:2rem;font-size:.85rem;color:#aaa;}
+
+/* Back to top */
+#to-top{position:fixed;right:1rem;bottom:1rem;width:44px;height:44px;border-radius:50%;background:var(--purple);color:var(--white);border:none;display:flex;align-items:center;justify-content:center;font-size:1.2rem;cursor:pointer;opacity:0;visibility:hidden;transition:.3s;}
+#to-top.show{opacity:1;visibility:visible;}
+
+/* ==== MEDIA QUERIES ==== */
+@media(max-width:768px){
+  #nav-links{position:fixed;inset:70px 0 0 0;background:var(--purple-dark);flex-direction:column;align-items:center;gap:2rem;padding-top:2rem;transform:translateY(-120%);transition:.4s;}
+  #nav-links.open{transform:translateY(0);}
+  #burger{display:flex;}
+  #hero-video{display:none;} /* Фон-видео скрываем на моб. */
+  .hero-content h1{font-size:2rem;}
+  .btn{width:100%;max-width:320px;margin:.3rem auto;}
+}
