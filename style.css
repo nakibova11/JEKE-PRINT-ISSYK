@@ -134,12 +134,12 @@ footer{background:var(--gray-dark);padding:3rem 0 1rem;}
     gap: .3rem;
   }
   .logo {
-    font-size: 1.15rem !important;
+    font-size: 1rem !important;
     white-space: nowrap !important;
   }
   #lang-switcher {
     margin-left: auto !important;
-    font-size: .8rem !important;
+    font-size: .7rem !important;
   }
   #burger {
     display: none !important;
