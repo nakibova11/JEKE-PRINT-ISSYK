@@ -124,3 +124,37 @@ footer{background:var(--gray-dark);padding:3rem 0 1rem;}
   .hero-content h1{font-size:2rem;}
   .btn{width:100%;max-width:320px;margin:.3rem auto;}
 }
+/* === Горизонтальное меню для узких экранов === */
+@media (max-width: 768px){
+  /* прячем бургер */
+  #burger{display:none;}
+
+  /* контейнер-скроллер */
+  #nav-links{
+    position:relative;      /* больше не fixed */
+    inset:auto;             /* сброс фиксированных координат */
+    height:auto;
+    transform:none;         /* убираем translateY */
+    display:flex;
+    flex-wrap:nowrap;
+    gap:1.2rem;
+    overflow-x:auto;        /* горизонтальный скролл */
+    white-space:nowrap;     /* пункты не переносятся */
+    padding:0 1rem;
+    background:var(--purple-dark);
+  }
+
+  /* скрываем полоску прокрутки в Chrome Android / Safari */
+  #nav-links::-webkit-scrollbar{display:none;}
+
+  /* ссылки стиль */
+  #nav-links a{
+    display:inline-block;
+    padding:1rem 0;
+    font-size:1rem;
+  }
+
+  /* чтобы контент страницы не прятался под меню,
+     увеличим верхний отступ у hero */
+  #hero{padding-top:70px;}  /* = высоте навбара */
+}
