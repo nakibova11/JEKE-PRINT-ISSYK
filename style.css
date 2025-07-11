@@ -124,37 +124,55 @@ footer{background:var(--gray-dark);padding:3rem 0 1rem;}
   .hero-content h1{font-size:2rem;}
   .btn{width:100%;max-width:320px;margin:.3rem auto;}
 }
-/* === Горизонтальное меню для узких экранов === */
-@media (max-width: 768px){
-  /* прячем бургер */
-  #burger{display:none;}
+/* === MOBILE ≤ 480 px: компактный хедер  ========================= */
+@media (max-width:480px){
 
-  /* контейнер-скроллер */
-  #nav-links{
-    position:relative;      /* больше не fixed */
-    inset:auto;             /* сброс фиксированных координат */
-    height:auto;
-    transform:none;         /* убираем translateY */
-    display:flex;
-    flex-wrap:nowrap;
-    gap:1.2rem;
-    overflow-x:auto;        /* горизонтальный скролл */
-    white-space:nowrap;     /* пункты не переносятся */
-    padding:0 1rem;
-    background:var(--purple-dark);
+  /* 1) Логотип короче и не переносится */
+  .logo{
+    font-size:1.15rem;      /* было 1.4rem */
+    line-height:1;          /* плотнее строки */
+    white-space:nowrap;     /* не переносим слова */
   }
 
-  /* скрываем полоску прокрутки в Chrome Android / Safari */
+  /* 2) Внутри .nav-inner теперь колонка */
+  .nav-inner{
+    flex-direction:column;  /* сверху логотип+перекл. языка,
+                               ниже — горизонтальное меню */
+    align-items:flex-start;
+    gap:.2rem;
+  }
+
+  /* 3) Горизонтальный список ссылок */
+  #nav-links{
+    display:flex;
+    width:100%;
+    justify-content:space-between; /* равномерно растягиваем */
+    flex-wrap:nowrap;              /* одна строка */
+    padding:.3rem 0 .5rem;
+    background:none;               /* убираем тёмный блок */
+    overflow-x:auto;               /* если тесно — свайпом */
+  }
+
+  /* 3а) скрываем полоску прокрутки (Chrome/Safari) */
   #nav-links::-webkit-scrollbar{display:none;}
 
-  /* ссылки стиль */
+  /* 4) Размер и вид ссылок */
   #nav-links a{
-    display:inline-block;
-    padding:1rem 0;
-    font-size:1rem;
+    font-size:.9rem;           /* меньше шрифт */
+    line-height:1;             /* плотнее */
+    padding:0 .3rem;
   }
 
-  /* чтобы контент страницы не прятался под меню,
-     увеличим верхний отступ у hero */
-  #hero{padding-top:70px;}  /* = высоте навбара */
+  /* 5) Переключатель языка чуть правее */
+  #lang-switcher{
+    font-size:.75rem;
+    margin-left:auto;          /* прижали вправо */
+  }
+
+  /* 6) Бургер окончательно скрыт */
+  #burger{display:none;}
+
+  /* 7) Hero опускаем на высоту нового хедера,
+        чтобы текст не "подлезал" под меню */
+  #hero{padding-top:90px;}
 }
