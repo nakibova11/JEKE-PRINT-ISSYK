@@ -124,55 +124,61 @@ footer{background:var(--gray-dark);padding:3rem 0 1rem;}
   .hero-content h1{font-size:2rem;}
   .btn{width:100%;max-width:320px;margin:.3rem auto;}
 }
-/* === MOBILE ≤ 480 px: компактный хедер  ========================= */
-@media (max-width:480px){
-
-  /* 1) Логотип короче и не переносится */
+/* === MOBILE HEADER COMPACT (≤ 600 px) ========================= */
+@media (max-width:600px){
+  /* логотип короче, не переносится */
   .logo{
-    font-size:1.15rem;      /* было 1.4rem */
-    line-height:1;          /* плотнее строки */
-    white-space:nowrap;     /* не переносим слова */
+    font-size:1.1rem !important;
+    line-height:1;
+    white-space:nowrap;
   }
 
-  /* 2) Внутри .nav-inner теперь колонка */
+  /* шапка в две строки: 1) логотип + языки  2) горизонтальное меню */
   .nav-inner{
-    flex-direction:column;  /* сверху логотип+перекл. языка,
-                               ниже — горизонтальное меню */
+    flex-direction:column !important;
     align-items:flex-start;
     gap:.2rem;
   }
 
-  /* 3) Горизонтальный список ссылок */
-  #nav-links{
-    display:flex;
-    width:100%;
-    justify-content:space-between; /* равномерно растягиваем */
-    flex-wrap:nowrap;              /* одна строка */
-    padding:.3rem 0 .5rem;
-    background:none;               /* убираем тёмный блок */
-    overflow-x:auto;               /* если тесно — свайпом */
-  }
-
-  /* 3а) скрываем полоску прокрутки (Chrome/Safari) */
-  #nav-links::-webkit-scrollbar{display:none;}
-
-  /* 4) Размер и вид ссылок */
-  #nav-links a{
-    font-size:.9rem;           /* меньше шрифт */
-    line-height:1;             /* плотнее */
-    padding:0 .3rem;
-  }
-
-  /* 5) Переключатель языка чуть правее */
+  /* переключатель языков вправо */
   #lang-switcher{
-    font-size:.75rem;
-    margin-left:auto;          /* прижали вправо */
+    margin-left:auto;
+    font-size:.8rem;
   }
 
-  /* 6) Бургер окончательно скрыт */
-  #burger{display:none;}
+  /* бургер полностью скрываем */
+  #burger{display:none !important;}
 
-  /* 7) Hero опускаем на высоту нового хедера,
-        чтобы текст не "подлезал" под меню */
-  #hero{padding-top:90px;}
+  /* ——— горизонтальное меню ——— */
+  #nav-links{
+    /* снимаем старые fixed-настройки */
+    position:relative !important;
+    top:auto !important; left:auto !important;
+    transform:none !important;
+
+    /* горизонтальная линия */
+    display:flex !important;
+    flex-wrap:nowrap;
+    justify-content:space-between;
+    gap:.8rem;
+
+    width:100%;
+    padding:.3rem 0 .4rem;
+    background:none !important;   /* убираем тёмный фон */
+
+    overflow-x:auto;
+    scrollbar-width:none;          /* Firefox */
+  }
+  #nav-links::-webkit-scrollbar{display:none;} /* Chrome/Safari */
+
+  /* пункты меню поменьше */
+  #nav-links a{
+    font-size:.9rem !important;
+    line-height:1;
+    padding:0 .3rem;
+    white-space:nowrap;
+  }
+
+  /* чтобы hero не лез под шапку */
+  #hero{padding-top:90px !important;}
 }
