@@ -134,7 +134,7 @@ footer{background:var(--gray-dark);padding:3rem 0 1rem;}
     gap: .3rem;
   }
   .logo {
-    font-size: 1rem !important;
+    font-size: 0.9rem !important;
     white-space: nowrap !important;
   }
   #lang-switcher {
@@ -159,7 +159,7 @@ footer{background:var(--gray-dark);padding:3rem 0 1rem;}
     display: none !important;
   }
   #nav-links a {
-    font-size: .9rem !important;
+    font-size: .8rem !important;
     white-space: nowrap !important;
     padding: 0 !important;
   }
