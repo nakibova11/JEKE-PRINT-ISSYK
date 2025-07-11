@@ -4,14 +4,6 @@ window.addEventListener("load", () => {
   AOS.init({ once: true, duration: 800 });
 });
 
-/* ===== Burger & Smooth Scroll ===== */
-const burger = document.getElementById("burger");
-const navLinks = document.getElementById("nav-links");
-burger.addEventListener("click", () => navLinks.classList.toggle("open"));
-navLinks.addEventListener("click", e => {
-  if (e.target.tagName === "A") navLinks.classList.remove("open");
-});
-
 /* Scroll-spy + shadow */
 const sections = document.querySelectorAll("section, footer");
 const navItems = document.querySelectorAll("#nav-links a");
