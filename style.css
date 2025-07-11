@@ -124,64 +124,7 @@ footer{background:var(--gray-dark);padding:3rem 0 1rem;}
   .hero-content h1{font-size:2rem;}
   .btn{width:100%;max-width:320px;margin:.3rem auto;}
 }
-/* === старый MOBILE HEADER COMPACT (≤ 600 px) ========================= 
-@media (max-width:600px){
-  /* логотип короче, не переносится */
-  .logo{
-    font-size:1.1rem !important;
-    line-height:1;
-    white-space:nowrap;
-  }
 
-  /* шапка в две строки: 1) логотип + языки  2) горизонтальное меню */
-  .nav-inner{
-    flex-direction:column !important;
-    align-items:flex-start;
-    gap:.2rem;
-  }
-
-  /* переключатель языков вправо */
-  #lang-switcher{
-    margin-left:auto;
-    font-size:.8rem;
-  }
-
-  /* бургер полностью скрываем */
-  #burger{display:none !important;}
-
-  /* ——— горизонтальное меню ——— */
-  #nav-links{
-    /* снимаем старые fixed-настройки */
-    position:relative !important;
-    top:auto !important; left:auto !important;
-    transform:none !important;
-
-    /* горизонтальная линия */
-    display:flex !important;
-    flex-wrap:nowrap;
-    justify-content:space-between;
-    gap:.8rem;
-
-    width:100%;
-    padding:.3rem 0 .4rem;
-    background:none !important;   /* убираем тёмный фон */
-
-    overflow-x:auto;
-    scrollbar-width:none;          /* Firefox */
-  }
-  #nav-links::-webkit-scrollbar{display:none;} /* Chrome/Safari */
-
-  /* пункты меню поменьше */
-  #nav-links a{
-    font-size:.9rem !important;
-    line-height:1;
-    padding:0 .3rem;
-    white-space:nowrap;
-  }
-
-  /* чтобы hero не лез под шапку */
-  #hero{padding-top:90px !important;}
-} */
 
 /* === MOBILE HEADER (≤ 600 px)  ================================ */
 @media (max-width:600px){
