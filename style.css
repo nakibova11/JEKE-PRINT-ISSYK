@@ -139,7 +139,7 @@ footer{background:var(--gray-dark);padding:3rem 0 1rem;}
   }
   #lang-switcher {
     margin-left: auto !important;
-    font-size: .7rem !important;
+    font-size: 0.7rem !important;
   }
   #burger {
     display: none !important;
@@ -159,7 +159,7 @@ footer{background:var(--gray-dark);padding:3rem 0 1rem;}
     display: none !important;
   }
   #nav-links a {
-    font-size: .8rem !important;
+    font-size: 0.8rem !important;
     white-space: nowrap !important;
     padding: 0 !important;
   }
